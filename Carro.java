@@ -11,32 +11,48 @@ public class Carro{
 
        Carro c2 = new Carro();
 
-       c1.placa = 1407;
-       c1.modelo = "civic";
-       c1.cor = "prata";
-       c1.PrintDados();
+       c1.setPlaca(1407);
+       c1.setModelo("civic");
+       c1.setCor("prata");
+       
+       System.out.println("\nPlaca: "+getPlaca);
+       System.out.println("\nModelo: "+getModelo);
+       System.out.println("\nCor: "+getCor);
 
-       c2.InsereDados(1308, "corsa", "verde");
-       c2.PrintDados();
+       c2.setPlaca(1308);
+       c2.setModelo("corsa");
+       c2.setCor("rosa");
+       
+       System.out.println("\nPlaca: "+getPlaca);
+       System.out.println("\nModelo: "+getModelo);
+       System.out.println("\nCor: "+getCor);
+        
+    }
 
     
 
-    }
+    public int getPlaca(){
+    return placa;
+ }
 
-    public void PrintDados(){
-        
-       System.out.println("Placa: " + placa);
-        System.out.println("Modelo: " + modelo);
-        System.out.println("Cor: " + cor);
-        System.out.println(); 
+ public String getModelo(){
+    return modelo;
+ }
+ public String getCor(){
+    return cor;
+ }
 
-    }
+ public void setPlaca(int placa){
+    this.placa = placa;
+ }
 
-    public void InsereDados(int placax, String modelox, String corx){
-        
-        cor = corx;
-        placa = placax;
-        modelo = modelox;
+ public void setModelo(String modelo){
+    this.modelo = modelo;
+ }
 
-    }
+ public void setCor(String cor){
+    this.cor = cor;
+ }
+
+    
 }
